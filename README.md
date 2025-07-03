@@ -44,5 +44,5 @@ fetch('https://fakestoreapi.com/products/category/jewelery')
             .then(res=>res.json())
             .then(json=>console.log(json))
 ```
- You can also use limit(Number) and sort(asc|desc) as a query string to get your ideal results
+ You can also use limit(Number) and sort(asc|desc) as a query string to get your ideal results.
 
