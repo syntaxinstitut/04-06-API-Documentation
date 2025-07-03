@@ -41,55 +41,55 @@ You can also use limit(Number) and sort(asc|desc) as a query string to get your 
 ## Add new product
 ```
 fetch('https://fakestoreapi.com/products',{
-            method:"POST",
-            body:JSON.stringify(
-                {
-                    title: 'test product',
-                    price: 13.5,
-                    description: 'lorem ipsum set',
-                    image: 'https://i.pravatar.cc',
-                    category: 'electronic'
-                }
-            )
-        })
+    method:"POST",
+    body:JSON.stringify(
+        {
+            title: 'test product',
+            price: 13.5,
+            description: 'lorem ipsum set',
+            image: 'https://i.pravatar.cc',
+            category: 'electronic'
+        }
+    )
+})
 ```          
 If you send an object like the code above, it will return you an object with a new id. Remember that nothing in real will insert into the database. So if you want to access the new id you will get a 404 error.
 
 ### Update a product
 ```
 fetch('https://fakestoreapi.com/products/7',{
-            method:"PUT",
-            body:JSON.stringify(
-                {
-                    title: 'test product',
-                    price: 13.5,
-                    description: 'lorem ipsum set',
-                    image: 'https://i.pravatar.cc',
-                    category: 'electronic'
-                }
-            )
-        })
+    method:"PUT",
+    body:JSON.stringify(
+        {
+            title: 'test product',
+            price: 13.5,
+            description: 'lorem ipsum set',
+            image: 'https://i.pravatar.cc',
+            category: 'electronic'
+        }
+    )
+})
             
 fetch('https://fakestoreapi.com/products/7',{
-                method:"PATCH",
-                body:JSON.stringify(
-                    {
-                        title: 'test product',
-                        price: 13.5,
-                        description: 'lorem ipsum set',
-                        image: 'https://i.pravatar.cc',
-                        category: 'electronic'
-                    }
-                )
-            })
+    method:"PATCH",
+    body:JSON.stringify(
+        {
+            title: 'test product',
+            price: 13.5,
+            description: 'lorem ipsum set',
+            image: 'https://i.pravatar.cc',
+            category: 'electronic'
+        }
+    )
+})
 ```
 It will return you an object with sent id. Remember that nothing in real will update in the database.
 
 ### Delete a product
 ```
 fetch('https://fakestoreapi.com/products/6',{
-            method:"DELETE"
-        })
+    method:"DELETE"
+})
 ```
            
 The product will not be deleted on the database. But if you sent data successfully it will return you the fake deleted product.
@@ -132,49 +132,49 @@ You can also use date range as query string to get your ideal results.
 ### Add a new product
 ```
 fetch('https://fakestoreapi.com/carts',{
-            method:"POST",
-            body:JSON.stringify(
-                {
-                    userId:5,
-                    date:2020-02-03,
-                    products:[{productId:5,quantity:1},{productId:1,quantity:5}]
-                }
-            )
-        })
+    method:"POST",
+    body:JSON.stringify(
+        {
+            userId:5,
+            date:2020-02-03,
+            products:[{productId:5,quantity:1},{productId:1,quantity:5}]
+        }
+    )
+})
 ```
 If you send an object like the code above, it will return you an object with a new id. Remember that nothing in real will insert into the database. So if you want to access the new id you will get a 404 error.
 
 ### Update a product
 ```
 fetch('https://fakestoreapi.com/carts/7',{
-            method:"PUT",
-            body:JSON.stringify(
-                {
-                    userId:3,
-                    date:2019-12-10,
-                    products:[{productId:1,quantity:3}]
-                }
-            )
-        })
+    method:"PUT",
+    body:JSON.stringify(
+        {
+            userId:3,
+            date:2019-12-10,
+            products:[{productId:1,quantity:3}]
+        }
+    )
+})
 
 fetch('https://fakestoreapi.com/carts/7',{
-                method:"PATCH",
-                body:JSON.stringify(
-                    {
-                        userId:3,
-                        date:2019-12-10,
-                        products:[{productId:1,quantity:3}]
-                    }
-                )
-            })
+    method:"PATCH",
+    body:JSON.stringify(
+        {
+            userId:3,
+            date:2019-12-10,
+            products:[{productId:1,quantity:3}]
+        }
+    )
+})
 ```
 It will return you an object with sent id. Remember that nothing in real will update in the database.
 
 ### Delete a cart
 ```
 fetch('https://fakestoreapi.com/carts/6',{
-            method:"DELETE"
-        })
+    method:"DELETE"
+})
 ```
 The cart will not be deleted on the database. But if you sent data successfully it will return you the fake deleted cart.
 
@@ -205,94 +205,94 @@ The default value is in ascending mode, you can use it with 'desc' or 'asc' as y
 ### Add a new user
 ```
 fetch('https://fakestoreapi.com/users',{
-            method:"POST",
-            body:JSON.stringify(
-                {
-                    email:'John@gmail.com',
-                    username:'johnd',
-                    password:'m38rmF$',
-                    name:{
-                        firstname:'John',
-                        lastname:'Doe'
-                    },
-                    address:{
-                        city:'kilcoole',
-                        street:'7835 new road',
-                        number:3,
-                        zipcode:'12926-3874',
-                        geolocation:{
-                            lat:'-37.3159',
-                            long:'81.1496'
-                        }
-                    },
-                    phone:'1-570-236-7033'
+    method:"POST",
+    body:JSON.stringify(
+        {
+            email:'John@gmail.com',
+            username:'johnd',
+            password:'m38rmF$',
+            name:{
+                firstname:'John',
+                lastname:'Doe'
+            },
+            address:{
+                city:'kilcoole',
+                street:'7835 new road',
+                number:3,
+                zipcode:'12926-3874',
+                geolocation:{
+                    lat:'-37.3159',
+                    long:'81.1496'
                 }
-            )
-        })
+            },
+            phone:'1-570-236-7033'
+        }
+    )
+})
 ```
 If you send an object like the code above, it will return you an object with a new id. Remember that nothing in real will insert into the database. So if you want to access the new id you will get a 404 error.
 
 ### Update a users
 ```
 fetch('https://fakestoreapi.com/users/7',{
-            method:"PUT",
-            body:JSON.stringify(
-                {
-                email:'John@gmail.com',
-                username:'johnd',
-                password:'m38rmF$',
-                name:{
-                    firstname:'John',
-                    lastname:'Doe'
-                },
-                address:{
-                    city:'kilcoole',
-                    street:'7835 new road',
-                    number:3,
-                    zipcode:'12926-3874',
-                    geolocation:{
-                        lat:'-37.3159',
-                        long:'81.1496'
-                    }
-                },
-                phone:'1-570-236-7033'
+    method:"PUT",
+    body:JSON.stringify(
+        {
+            email:'John@gmail.com',
+            username:'johnd',
+            password:'m38rmF$',
+            name:{
+                firstname:'John',
+                lastname:'Doe'
+            },
+            address:{
+                city:'kilcoole',
+                street:'7835 new road',
+                number:3,
+                zipcode:'12926-3874',
+                geolocation:{
+                    lat:'-37.3159',
+                    long:'81.1496'
                 }
-            )
-        })
+            },
+            phone:'1-570-236-7033'
+        }
+    )
+})
 
 fetch('https://fakestoreapi.com/users/7',{
-                method:"PATCH",
-                body:JSON.stringify(
-                    {
-                        email:'John@gmail.com',
-                        username:'johnd',
-                        password:'m38rmF$',
-                        name:{
-                            firstname:'John',
-                            lastname:'Doe'
-                        },
-                        address:{
-                            city:'kilcoole',
-                            street:'7835 new road',
-                            number:3,
-                            zipcode:'12926-3874',
-                            geolocation:{
-                                lat:'-37.3159',
-                                long:'81.1496'
-                            }
-                        },
-                        phone:'1-570-236-7033'
-                    }
-                )
-            })
+    method:"PATCH",
+    body:JSON.stringify(
+        {
+            email:'John@gmail.com',
+            username:'johnd',
+            password:'m38rmF$',
+            name:{
+                firstname:'John',
+                lastname:'Doe'
+            },
+            address:{
+                city:'kilcoole',
+                street:'7835 new road',
+                number:3,
+                zipcode:'12926-3874',
+                geolocation:{
+                    lat:'-37.3159',
+                    long:'81.1496'
+                }
+            },
+            phone:'1-570-236-7033'
+        }
+    )
+})
 ```
 It will return you an object with sent id. Remember that nothing in real will update in the database.
 
 ### Delete a user
 ```
 fetch('https://fakestoreapi.com/users/6',{
-            method:"DELETE"
-        })
+    method:"DELETE"
+})
 ```
 The user will not be deleted on the database. But if you sent data successfully it will return you the fake deleted user.
 
@@ -302,11 +302,11 @@ The user will not be deleted on the database. But if you sent data successfully 
 ### User login
 ```
 fetch('https://fakestoreapi.com/auth/login',{
-            method:'POST',
-            body:JSON.stringify({
-                username: "mor_2314",
-                password: "83r5^_"
-            })
-        })
+    method:'POST',
+    body:JSON.stringify({
+        username: "mor_2314",
+        password: "83r5^_"
+    })
+})
 ```
 You can use any of the users' username and password available in users API to get token. Any other usernames return error.
