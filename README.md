@@ -38,7 +38,7 @@ fetch('https://fakestoreapi.com/products/category/jewelery')
 ```
 You can also use limit(Number) and sort(asc|desc) as a query string to get your ideal results.
 
-## Add new product
+### Add new product
 ```
 fetch('https://fakestoreapi.com/products',{
     method:"POST",
